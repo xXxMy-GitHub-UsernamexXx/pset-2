@@ -1,0 +1,10 @@
+const inchSquaredToMillimeterSquared = 645.16;
+const widthQuestion = require("readline-sync");
+const paperWidth = widthQuestion.question("Width: ");
+const lengthQuestion = require("readline-sync");
+const paperLength = lengthQuestion.question("Length: ");
+let paperAreaInSquareInches = paperWidth * paperLength;
+let paperAreaInSquareMillimeters = paperAreaInSquareInches * inchSquaredToMillimeterSquared * 100;
+Math.round(paperAreaInSquareMillimeters);
+paperAreaInSquareMillimeters = paperAreaInSquareMillimeters / 100;
+console.log(paperAreaInSquareMillimeters);
