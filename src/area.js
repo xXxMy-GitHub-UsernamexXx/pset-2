@@ -7,4 +7,5 @@ let paperAreaInSquareInches = paperWidth * paperLength;
 let paperAreaInSquareMillimeters = paperAreaInSquareInches * inchSquaredToMillimeterSquared * 100;
 Math.round(paperAreaInSquareMillimeters);
 paperAreaInSquareMillimeters = paperAreaInSquareMillimeters / 100;
-console.log(paperAreaInSquareMillimeters);
+let paperAreaInSquareMillimetersWithCommas = paperAreaInSquareMillimeters.toLocaleString();
+console.log(paperAreaInSquareMillimetersWithCommas);
