@@ -4,8 +4,5 @@ const paperWidth = widthQuestion.question("Width: ");
 const lengthQuestion = require("readline-sync");
 const paperLength = lengthQuestion.question("Length: ");
 let paperPerimeterInInches = 2 * paperWidth + 2 * paperLength;
-let paperPerimeterInCentimeters = inchToCentimeter * paperPerimeterInInches * 100
-Math.round(paperPerimeterInCentimeters);
-paperPerimeterInCentimeters = paperPerimeterInCentimeters / 100;
-let paperPerimeterInCentimetersWithCommas = paperPerimeterInCentimeters.toLocaleString();
-console.log(paperPerimeterInCentimetersWithCommas);
+let paperPerimeterInCentimeters = inchToCentimeter * paperPerimeterInInches;
+console.log(paperPerimeterInCentimeters.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}));
