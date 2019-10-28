@@ -1,0 +1,14 @@
+console.log();
+const studentQuestion = require("readline-sync");
+const studentNumber = Number(studentQuestion.question("Students: "));
+const teacherQuestion = require("readline-sync");
+const teacherNumber = Number(teacherQuestion.question("Teachers: "));
+const busQuestion = require("readline-sync");
+const busCapacity = Number(busQuestion.question("Bus capacity: "));
+let totalPassengers = Number(studentNumber + teacherNumber);
+let numberInUnfilledBus = Number(totalPassengers % busCapacity);
+let busesNeeded = Number(((totalPassengers - numberInUnfilledBus) / busCapacity) + 1);
+busesNeeded = busesNeeded.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+let busMessage = `${busesNeeded} bus(es) is (are) needed, with ${numberInUnfilledBus} passenger(s) on the last bus.`;
+console.log();
+console.log(busMessage);
