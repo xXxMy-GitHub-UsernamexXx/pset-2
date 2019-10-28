@@ -6,5 +6,7 @@ const lengthQuestion = require("readline-sync");
 const paperLength = lengthQuestion.question("Length: ");
 let paperAreaInSquareInches = paperWidth * paperLength;
 let paperAreaInSquareMillimeters = paperAreaInSquareInches * inchSquaredToMillimeterSquared;
+paperAreaInSquareMillimeters = paperAreaInSquareMillimeters.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 console.log();
-console.log("A(n) " + paperWidth + "-by-" + paper length + "-inch sheet of paper has an area of " + paperAreaInSquareMillimeters.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + "square millimeter(s).");
+let areaMessage = `A(n) ${paperWidth}-by-${paperLength}-inch sheet of paper has an area of ${paperAreaInSquareMillimeters} square millimeter(s).`
+console.log(areaMessage);
