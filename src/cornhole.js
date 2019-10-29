@@ -1,0 +1,12 @@
+const boardWidth = Number(24);
+const boardLength = Number(48);
+const holeDiameter = Number(6);
+const diameterToRadius = Number(0.5);
+let areaOfBoard = Number(boardWidth * boardLength);
+let holeRadius = Number(holeDiameter * diameterToRadius);
+let areaOfHole = Number((holeRadius ** 2) * Math.PI);
+areaOfBoard = Number(areaOfBoard - areaOfHole);
+let boardMessage = `The surface area of a standard Cornhole board is ${areaOfBoard} square inch(es).`;
+let areaOfBoardRounded = areaOfBoard.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+console.log();
+console.log(boardMessage);
